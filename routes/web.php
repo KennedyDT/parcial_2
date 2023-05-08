@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
 
 Route::resource("sales", SalesController::class);
 
@@ -22,3 +22,5 @@ Route::get('/sales', function () {
 Route::get('/sales/index',[SalesController::class,'index']);
 
 Route::resource('sales',SalesController::class);
+
+*/
