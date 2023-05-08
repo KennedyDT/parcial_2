@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -13,3 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource("sales", SalesController::class);
+
+Route::get('/sales', function () {
+    return view('sales.index');
+});
+
+Route::get('/sales/index',[SalesController::class,'index']);
+
+Route::resource('sales',SalesController::class);
